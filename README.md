@@ -1,3 +1,13 @@
+# Discord.NET Bot Template
+This is a template for making C# Discord bots with the Discord.NET framework in a containerized fashion with Docker.
+
+# Wanna Go Fast?
+If you aren't interested in self hosting, and you just wanna get your bot online, click this big purple button to deploy to the cloud instantly!
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/inw1EU?referralCode=FBRIfP)
+
+
+
 # Discord Bot Setup Guide
 
 This guide will walk you through setting up a simple Discord bot using Discord.net, either by running it locally using Docker or deploying it to Railway.
