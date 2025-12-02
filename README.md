@@ -1,13 +1,6 @@
 # Discord.NET Bot Template
 This is a template for making C# Discord bots with the Discord.NET framework in a containerized fashion with Docker.
 
-# Wanna Go Fast?
-If you aren't interested in self hosting, and you just wanna get your bot online, click this big purple button to deploy to the cloud instantly!
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/inw1EU?referralCode=FBRIfP)
-
-
-
 # Discord Bot Setup Guide
 
 This guide will walk you through setting up a simple Discord bot using Discord.net, either by running it locally using Docker or deploying it to Railway.
@@ -16,7 +9,7 @@ This guide will walk you through setting up a simple Discord bot using Discord.n
 
 Before starting, make sure you have the following installed:
 
-- [.NET SDK](https://dotnet.microsoft.com/download) (version 6.0 or later)
+- [.NET SDK](https://dotnet.microsoft.com/download) (version 9.0 or later)
 - [Docker](https://www.docker.com/get-started) (for local setup)
 - A [Discord account](https://discord.com/) with permissions to create a bot
 - A [Railway](https://railway.app/) account (for cloud deployment)
@@ -42,11 +35,11 @@ Replace `your-discord-bot-token` with your actual bot token. You can obtain this
 
 ## Step 3: Use the Dockerfile
 
-Here’s the Dockerfile you provided:
+Here’s the Dockerfile you're provided:
 
 ```dockerfile
 # Use the official .NET image as a base image
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 
 # Set the working directory to the current directory
 WORKDIR /app
@@ -62,7 +55,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # Use a runtime image
-FROM mcr.microsoft.com/dotnet/runtime:6.0
+FROM mcr.microsoft.com/dotnet/runtime:9.0
 
 # Set the working directory to the current directory
 WORKDIR /app
@@ -143,3 +136,8 @@ Railway provides logs and management tools to monitor your bot's performance and
 
 - **Logs**: You can view logs from the Railway dashboard.
 - **Scaling**: Adjust the resources allocated to your bot if necessary.
+
+# Wanna Go Fast?
+If you aren't interested in self hosting, and you just wanna get your bot online, click this big purple button to deploy to the cloud instantly!
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/inw1EU?referralCode=FBRIfP)
